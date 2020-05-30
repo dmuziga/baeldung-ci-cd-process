@@ -4,7 +4,11 @@ jdk:
 
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker pull openjdk:11-jre-slim-sid
+  - docker pull openjdk:8-jre-alpine
+  - mvn -N io.takari:maven:wrapper
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+
 script:
   - ./mvnw clean install
   - ./mvnw deploy jib:build -P deploy-docker
