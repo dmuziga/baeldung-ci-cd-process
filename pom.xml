@@ -56,7 +56,7 @@
                 <version>2.2.0</version>
                 <configuration>
                     <to>
-                        <image>dmuziga/baeldung-ci-cd-process</image>
+                        <image>dmuziga/movie-info-microservice</image>
                         <tags>
                             <tag>${project.version}</tag>
                             <tag>latest</tag>
