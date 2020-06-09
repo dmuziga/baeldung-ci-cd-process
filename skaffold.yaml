@@ -1,0 +1,12 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:☺
+  - image: dmuziga/baeldung-ci-cd-process
+    jib:
+      args: ['-DskipTests']
+
+deploy:
+  kubectl:
+    manifests:
+      - k8s/*.yaml

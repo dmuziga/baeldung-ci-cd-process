@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class GreetingController {
-    private static final String template = "Hello Docker File Uploaded, %s!";
+    private static final String template = "Hello Docker File Uploaded!";
     private final AtomicLong counter = new AtomicLong(100);
 
     @GetMapping("/greeting")
